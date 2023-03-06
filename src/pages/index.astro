@@ -2,13 +2,18 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component front matter". It never runs in the browser.
 import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const pageTitle = 'Home Page';
 ---
 <!--  Below is your "component template." It's just HTML, but with
       some magic sprinkled in to help you build great templates. -->
+<style>
+  h1 {
+    color: orange;
+  }
+</style>
 <html>
   <head>
     <meta charset ="utf-8" />
@@ -16,13 +21,11 @@ const pageTitle = 'Home Page';
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Navigation />
+    <Header />
     <h1>{pageTitle}</h1>
     <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
 </html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
